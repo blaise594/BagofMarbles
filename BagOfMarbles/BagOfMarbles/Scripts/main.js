@@ -1,5 +1,13 @@
 ﻿console.log("loaded main.js");
 
+let LoadRandomMarble = () => {
+
+    let bagofmarbles = $("bagofmarbles").children();
+    var rand = Math.floor(Math.random * bagofmarbles.length);
+    $("#random").html(bagofmarbles[rand].innerHTML);
+        
+}
+
 let LoadTheMarbles = () => {
 
     $.ajax({

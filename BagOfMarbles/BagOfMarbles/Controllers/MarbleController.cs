@@ -24,9 +24,11 @@ namespace BagOfMarbles.Controllers
             return Ok(listofmarbles);
         }
 
+        [HttpGet]
         public IHttpActionResult GetRandomMarble(int count)
         {
-
+            var RandomMarble = new Random().Next(0, listofmarbles.Count);
+            return Ok(listofmarbles[RandomMarble]);
         }
     }
 }
