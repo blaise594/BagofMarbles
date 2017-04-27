@@ -14,14 +14,15 @@ let LoadTheMarbles = () => {
         url: "/api/marble",
         datatype: "json",
         success: (marble) => {
-           marble.map((n) => {
-            $("#BagOfMarbles")
-                .append($("<li>").html(m.Color))
+            marble.map((n) => {
+                $("#BagOfMarbles")
+                    .append($("<li>").html(m.Color))
 
-           });
+            });
         }
     });
 
-$(document).ready(() => {
-    console.log("ready...");
-});
+    $(document).ready(() => {
+        console.log("ready...");
+    });
+}
